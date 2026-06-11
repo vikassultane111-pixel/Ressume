@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Gopal Sultane | Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f3f4f6; /* Light gray background for screen */
+            font-family: Arial, Helvetica, sans-serif; /* Standard professional resume font */
+            color: #000000;
+            line-height: 1.5;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                margin: 0;
+                padding: 0;
+            }
+            .a4-page {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            a {
+                text-decoration: none !important;
+                color: black !important;
+            }
+            @page {
+                margin: 0.5in 0.75in;
+            }
+            /* Force flex-row on print even if printing from mobile view */
+            .print-row {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: baseline !important;
+            }
+            .print-mt-0 {
+                margin-top: 0 !important;
+            }
+        }
+
+        h2 {
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 12px;
+            margin-top: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #000;
+        }
+
+        p, li, div {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="a4-page bg-white w-full max-w-[850px] mx-auto shadow-md sm:my-8 md:my-10 p-5 sm:p-10 md:p-12">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-6">
+            <h1 class="text-[20px] sm:text-[22px] font-bold uppercase mb-1">VIKAS GOPAL SULTANE</h1>
+            <div class="font-semibold text-[13px] sm:text-[14px] mb-1">Security Test Engineer | Web & API Penetration Tester | VAPT Analyst</div>
+            <div class="text-[12px] sm:text-[13px] mb-2 leading-relaxed">
+                +91-9022243296 | vikassultane214@gmail.com | Pune, Maharashtra
+            </div>
+            <div class="text-[12px] sm:text-[13px] flex flex-wrap justify-center gap-x-2 gap-y-1">
+                <a href="https://linkedin.com/in/vikas-sultane-82244322b" class="text-blue-700 underline hover:text-blue-800 break-all">linkedin.com/in/vikas-sultane-82244322b</a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://vikas-sultane.netlify.app" class="text-blue-700 underline hover:text-blue-800 break-all">vikas-sultane.netlify.app</a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://decoderx.pages.dev" class="text-blue-700 underline hover:text-blue-800 break-all">decoderx.pages.dev</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="text-left sm:text-justify mb-2 leading-relaxed">
+                Security Test Engineer with 1+ year of hands-on experience in Web Application and API Penetration Testing (VAPT), specializing in identifying and exploiting vulnerabilities aligned with OWASP Top 10 and OWASP API Security Top 10. Successfully discovered and validated 15+ critical and high-severity vulnerabilities including IDOR/BOLA, SQL Injection, Privilege Escalation, Business Logic Flaws, and Authentication Bypass. Experienced in manual security testing, vulnerability assessment, proof-of-concept development, CVSS scoring, and remediation validation using Burp Suite, SQLMap, Postman, Python, and Linux-based security tools.
+            </p>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            
+            <!-- Job 1 -->
+            <div class="mb-5">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>Security Test Engineer</span>
+                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Apr 2025 - Present | Full-time</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] italic mb-2">
+                    <span>Vmedulife Software Pvt. Ltd.</span>
+                    <span class="font-normal not-italic text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Pune, Maharashtra</span>
+                </div>
+                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
+                    <li>Executed manual Web Application and API penetration testing; identified 15+ critical/high-severity vulnerabilities across staging environments - OWASP Top 10 and OWASP API Security Top 10 aligned.</li>
+                    <li>Exploited IDOR/BOLA by manipulating object references to access unauthorized user records; chained with auth token reuse to demonstrate full account takeover across 3 user roles.</li>
+                    <li>Discovered Blind and Boolean-based SQL Injection in API endpoints using manual payloads and SQLMap; bypassed WAF filters via encoding and fragmentation techniques.</li>
+                    <li>Achieved unauthorized Privilege Escalation from standard user to admin-level access exposed both horizontal and vertical privilege flaws.</li>
+                    <li>Identified Business Logic vulnerabilities: race conditions on OTP/coupon endpoints, rate limit bypass via IP rotation and X-Forwarded-For header spoofing, and workflow sequence manipulation.</li>
+                    <li>Built and executed 100+ API security test cases covering mass assignment, excessive data exposure, broken function-level authorization, and CORS misconfiguration.</li>
+                    <li>Delivered CVSS-scored vulnerability reports with PoC-backed evidence; collaborated with developers and QA on remediation tracked and verified sign-off for each finding.</li>
+                </ul>
+            </div>
+
+            <div class="mb-3">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>Cybersecurity Intern</span>
+                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Dec 2024 - Jan 2025 | Internship</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] italic mb-2">
+                    <span>Extion Infotech</span>
+                    <span class="font-normal not-italic text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Remote</span>
+                </div>
+                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
+                    <li>Conducted network vulnerability assessments using Nmap, Nessus, and Metasploit - identified 8+ critical misconfigurations across Windows-based systems.</li>
+                    <li>Executed full penetration testing lifecycle: scoping, enumeration, exploitation, and professional reporting across 2 network segments.</li>
+                    <li>Delivered structured mitigation reports with CVSS severity ratings and remediation steps for each identified finding.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="space-y-2 ml-1 pr-2 sm:pr-0">
+                <li><span class="font-bold">Security Testing:</span> Web Application Security (OWASP Top 10), API Security Testing (OWASP API Top 10), VAPT, Business Logic Testing, Authentication & Authorization Testing, Session Management Testing, Privilege Escalation, Race Condition Testing, IDOR/BOLA Testing</li>
+                <li><span class="font-bold">OSINT & Reconnaissance:</span> OSINT, GEOINT, SOCMINT, Metadata Analysis, Google Dorking, Shodan</li>
+                <li><span class="font-bold">Tools:</span> Burp Suite, Postman, sqlmap, Nmap, Nessus, OpenVAS, Metasploit, Wireshark, OWASP ZAP, Acunetix</li>
+                <li><span class="font-bold">Programming:</span> Python (automation, exploit scripting), Bash Scripting</li>
+                <li><span class="font-bold">Networking:</span> TCP/IP, HTTP/HTTPS, DNS, TLS/SSL, Packet Analysis, Network Protocols</li>
+                <li><span class="font-bold">Platforms & OS:</span> Kali Linux, Ubuntu, Windows 10/11</li>
+                <li><span class="font-bold">Reporting:</span> CVSS Scoring, PoC Development, Vulnerability Reporting & Remediation</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="mb-5">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>DecoderX - Security Encoding/Decoding Toolkit</span>
+                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Nov 2025 - Dec 2025</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] mb-2 italic">
+                    <span>React | Tailwind CSS | JavaScript</span>
+                    <a href="https://decoderx.pages.dev" class="text-blue-700 underline font-normal not-italic hover:text-blue-800 mt-0.5 sm:mt-0 print-mt-0 break-all">decoderx.pages.dev</a>
+                </div>
+                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
+                    <li>Built a browser-based security utility for real-time payload encoding/decoding directly applicable to web and API penetration testing workflows.</li>
+                    <li>Supports Base64, Base64URL, URL Encoding, Hex, Binary, Unicode, HTML Entity, ROT13, and Reverse all formats commonly used in payload manipulation during security assessments.</li>
+                    <li>Developed custom encoding/decoding logic with React + Tailwind CSS; optimized for low RAM usage and fast execution for real-time payload testing scenarios.</li>
+                </ul>
+            </div>
+
+            <div class="mb-3">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>Personal Portfolio Website</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] mb-2 italic">
+                    <span>HTML | CSS | JavaScript | Hosted on Netlify</span>
+                    <a href="https://vikas-sultane.netlify.app" class="text-blue-700 underline font-normal not-italic hover:text-blue-800 mt-0.5 sm:mt-0 print-mt-0 break-all">vikas-sultane.netlify.app</a>
+                </div>
+                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
+                    <li>Designed and developed a personal portfolio website showcasing security projects, tools, and professional profile.</li>
+                    <li>Built with vanilla HTML, CSS, and JavaScript; deployed on Netlify for fast, reliable static hosting.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1">
+                <li><span class="font-bold">Advanced Cyber Security</span> - TechUnique Academy</li>
+                <li><span class="font-bold">OSINT - CCI</span> - TechUnique Academy</li>
+                <li><span class="font-bold">Linux</span> - WsCube Tech</li>
+                <li><span class="font-bold">Web Fundamentals</span> - Udemy</li>
+                <li><span class="font-bold">Computer Networks</span> - Udemy</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            
+            <div class="mb-4">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>B.Tech - Electronics & Telecommunication Engineering</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
+                    <span>Government College of Engineering, Yavatmal</span>
+                    <span class="mt-0.5 sm:mt-0 print-mt-0">2021 - 2025</span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>HSC (Class XII) | 83%</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
+                    <span>Jijamata Vidyalaya And Jr College, Naya Andura</span>
+                    <span class="mt-0.5 sm:mt-0 print-mt-0">2020 - 2021</span>
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
+                    <span>SSC (Class X) | 75%</span>
+                </div>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
+                    <span>Jijamata Vidyalaya And Jr College, Naya Andura</span>
+                    <span class="mt-0.5 sm:mt-0 print-mt-0">2018 - 2019</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
