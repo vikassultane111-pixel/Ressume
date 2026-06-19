@@ -3,225 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas Gopal Sultane | Resume</title>
+    <title>Vikas Gopal Sultane | Professional Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            background-color: #f3f4f6; /* Light gray background for screen */
-            font-family: Arial, Helvetica, sans-serif; /* Standard professional resume font */
-            color: #000000;
-            line-height: 1.5;
+            background-color: #f1f5f9; /* Soft slate background for web viewing */
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* Web View Container Adjustments */
+        .resume-container {
+            min-height: 297mm; /* Standard A4 height */
+        }
+
+        /* Perfect PDF Export Styling */
         @media print {
+            @page {
+                margin: 0; /* Let HTML padding handle the margins */
+                size: A4 portrait;
+            }
             body {
-                background-color: white;
+                background-color: white !important;
                 margin: 0;
                 padding: 0;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
-            .a4-page {
+            .resume-container {
                 box-shadow: none !important;
                 margin: 0 !important;
-                padding: 0 !important;
+                padding: 12mm 15mm !important; /* Standard A4 print margins */
                 max-width: 100% !important;
                 width: 100% !important;
+                border: none !important;
+                min-height: auto !important;
             }
-            a {
-                text-decoration: none !important;
-                color: black !important;
-            }
-            @page {
-                margin: 0.5in 0.75in;
-            }
-            /* Force flex-row on print even if printing from mobile view */
+            /* Force Flex rows on print even if mobile classes try to stack them */
             .print-row {
+                display: flex !important;
                 flex-direction: row !important;
                 justify-content: space-between !important;
                 align-items: baseline !important;
             }
-            .print-mt-0 {
-                margin-top: 0 !important;
+            .print-col-2 {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 2rem !important;
+            }
+            a {
+                text-decoration: none !important;
+            }
+            .print-bg-transparent {
+                background-color: transparent !important;
+                padding: 0 !important;
+            }
+            .print-hidden {
+                display: none !important;
             }
         }
-
-        h2 {
-            border-bottom: 1.5px solid #000;
-            padding-bottom: 2px;
-            margin-bottom: 12px;
-            margin-top: 20px;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: bold;
-            color: #000;
-        }
-
-        p, li, div {
-            font-size: 13px;
-        }
+        
+        /* Custom smooth scrollbar for web view */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
-<body class="antialiased">
+<body class="text-slate-700">
 
-    <div class="a4-page bg-white w-full max-w-[850px] mx-auto shadow-md sm:my-8 md:my-10 p-5 sm:p-10 md:p-12">
+    <main class="resume-container bg-white w-full max-w-[850px] mx-auto shadow-2xl sm:my-8 border border-slate-200 p-6 sm:p-10 md:p-12 transition-all">
         
-        <!-- Header Section -->
-        <header class="text-center mb-6">
-            <h1 class="text-[20px] sm:text-[22px] font-bold uppercase mb-1">VIKAS GOPAL SULTANE</h1>
-            <div class="font-semibold text-[13px] sm:text-[14px] mb-1">Security Test Engineer | Web & API Penetration Tester | VAPT Analyst</div>
-            <div class="text-[12px] sm:text-[13px] mb-2 leading-relaxed">
-                +91-9022243296 | vikassultane214@gmail.com | Pune, Maharashtra
+        <header class="mb-6 pb-5 border-b border-slate-200">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-4">
+                <div class="text-center md:text-left">
+                    <h1 class="text-[28px] md:text-[34px] font-bold uppercase tracking-tight text-slate-900 mb-1 leading-none">
+                        Vikas Gopal Sultane
+                    </h1>
+                    <div class="font-semibold text-[15px] md:text-[17px] text-blue-700 tracking-wide uppercase mt-1.5">
+                        Security Test Engineer | VAPT Analyst
+                    </div>
+                </div>
             </div>
-            <div class="text-[12px] sm:text-[13px] flex flex-wrap justify-center gap-x-2 gap-y-1">
-                <a href="https://linkedin.com/in/vikas-sultane-82244322b" class="text-blue-700 underline hover:text-blue-800 break-all">linkedin.com/in/vikas-sultane-82244322b</a>
-                <span class="hidden sm:inline">|</span>
-                <a href="https://vikas-sultane.netlify.app" class="text-blue-700 underline hover:text-blue-800 break-all">vikas-sultane.netlify.app</a>
-                <span class="hidden sm:inline">|</span>
-                <a href="https://decoderx.pages.dev" class="text-blue-700 underline hover:text-blue-800 break-all">decoderx.pages.dev</a>
+
+            <div class="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2.5 text-[13px] text-slate-600 font-medium">
+                
+                <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>+91-9022243296</span>
+                </div>
+
+                <a href="mailto:vikassultane214@gmail.com" class="flex items-center gap-1.5 hover:text-blue-700 transition-colors">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>vikassultane214@gmail.com</span>
+                </a>
+
+                <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Pune, Maharashtra</span>
+                </div>
+
+                <a href="https://linkedin.com/in/vikas-sultane-82244322b" class="flex items-center gap-1.5 hover:text-blue-700 transition-colors" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://vikas-sultane.netlify.app" class="flex items-center gap-1.5 hover:text-blue-700 transition-colors" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <span>Portfolio</span>
+                </a>
             </div>
         </header>
 
-        <section>
-            <h2>Professional Summary</h2>
-            <p class="text-left sm:text-justify mb-2 leading-relaxed">
-                Security Test Engineer with 1+ year of hands-on experience in Web Application and API Penetration Testing (VAPT), specializing in identifying and exploiting vulnerabilities aligned with OWASP Top 10 and OWASP API Security Top 10. Successfully discovered and validated 15+ critical and high-severity vulnerabilities including IDOR/BOLA, SQL Injection, Privilege Escalation, Business Logic Flaws, and Authentication Bypass. Experienced in manual security testing, vulnerability assessment, proof-of-concept development, CVSS scoring, and remediation validation using Burp Suite, SQLMap, Postman, Python, and Linux-based security tools.
+        <section class="mb-7">
+            <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-3 relative">
+                Professional Summary
+                <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+            </h2>
+            <p class="text-[13px] text-justify leading-relaxed text-slate-700">
+                Security Test Engineer with 1+ year of hands-on experience in Web Application and API Penetration Testing (VAPT), specializing in identifying and exploiting vulnerabilities aligned with OWASP Top 10 and OWASP API Security Top 10 standards. Successfully discovered and validated 15+ critical and high-severity vulnerabilities, including IDOR/BOLA, SQL Injection, Privilege Escalation, Business Logic Flaws, and Authentication Bypass. Proficient in manual security testing, vulnerability assessment, proof-of-concept (PoC) development, CVSS scoring, and remediation validation utilizing Burp Suite, SQLMap, Postman, Python, and Linux-based security tools.
             </p>
         </section>
 
-        <section>
-            <h2>Work Experience</h2>
+        <section class="mb-7">
+            <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-4 relative">
+                Work Experience
+                <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+            </h2>
             
             <!-- Job 1 -->
-            <div class="mb-5">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>Security Test Engineer</span>
-                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Apr 2025 - Present | Full-time</span>
+            <div class="mb-5 group">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline">
+                    <h3 class="font-bold text-[14.5px] text-slate-900 group-hover:text-blue-700 transition-colors">Security Test Engineer</h3>
+                    <span class="font-semibold text-[13px] text-slate-600 whitespace-nowrap bg-slate-100 px-2 py-0.5 rounded print-bg-transparent">Apr 2025 - Present</span>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] italic mb-2">
-                    <span>Vmedulife Software Pvt. Ltd.</span>
-                    <span class="font-normal not-italic text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Pune, Maharashtra</span>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline mb-2 text-[13.5px]">
+                    <span class="font-semibold text-blue-700">Vmedulife Software Pvt. Ltd.</span>
+                    <span class="text-[13px] text-slate-500 flex items-center gap-1 font-medium">
+                        <svg class="w-3.5 h-3.5 print-hidden text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path></svg>
+                        Pune, Maharashtra
+                    </span>
                 </div>
-                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
-                    <li>Executed manual Web Application and API penetration testing; identified 15+ critical/high-severity vulnerabilities across staging environments - OWASP Top 10 and OWASP API Security Top 10 aligned.</li>
-                    <li>Exploited IDOR/BOLA by manipulating object references to access unauthorized user records; chained with auth token reuse to demonstrate full account takeover across 3 user roles.</li>
-                    <li>Discovered Blind and Boolean-based SQL Injection in API endpoints using manual payloads and SQLMap; bypassed WAF filters via encoding and fragmentation techniques.</li>
-                    <li>Achieved unauthorized Privilege Escalation from standard user to admin-level access exposed both horizontal and vertical privilege flaws.</li>
-                    <li>Identified Business Logic vulnerabilities: race conditions on OTP/coupon endpoints, rate limit bypass via IP rotation and X-Forwarded-For header spoofing, and workflow sequence manipulation.</li>
-                    <li>Built and executed 100+ API security test cases covering mass assignment, excessive data exposure, broken function-level authorization, and CORS misconfiguration.</li>
-                    <li>Delivered CVSS-scored vulnerability reports with PoC-backed evidence; collaborated with developers and QA on remediation tracked and verified sign-off for each finding.</li>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-[13px] text-slate-700 text-justify marker:text-blue-500">
+                    <li>Executed manual Web Application and API penetration testing; identified 15+ critical and high-severity vulnerabilities across staging environments, strictly aligning with OWASP Top 10 and OWASP API Security Top 10.</li>
+                    <li>Exploited IDOR/BOLA by manipulating object references to access unauthorized user records; successfully chained this with authentication token reuse to demonstrate full account takeover across 3 distinct user roles.</li>
+                    <li>Discovered Blind and Boolean-based SQL Injection in API endpoints using manual payloads and SQLMap; bypassed Web Application Firewall (WAF) filters via strategic encoding and fragmentation techniques.</li>
+                    <li>Achieved unauthorized Privilege Escalation from a standard user to admin-level access, exposing both horizontal and vertical privilege flaws.</li>
+                    <li>Identified critical Business Logic vulnerabilities, including race conditions on OTP/coupon endpoints, rate limit bypass via IP rotation, X-Forwarded-For header spoofing, and workflow sequence manipulation.</li>
+                    <li>Built and executed 100+ comprehensive API security test cases covering mass assignment, excessive data exposure, broken function-level authorization, and CORS misconfigurations.</li>
+                    <li>Delivered detailed, CVSS-scored vulnerability reports backed by PoC evidence; collaborated closely with developers and QA teams to track remediation progress and verified final sign-off for each finding.</li>
                 </ul>
             </div>
 
-            <div class="mb-3">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>Cybersecurity Intern</span>
-                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Dec 2024 - Jan 2025 | Internship</span>
+            <!-- Job 2 -->
+            <div class="mb-3 group">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline">
+                    <h3 class="font-bold text-[14.5px] text-slate-900 group-hover:text-blue-700 transition-colors">Cybersecurity Intern</h3>
+                    <span class="font-semibold text-[13px] text-slate-600 whitespace-nowrap bg-slate-100 px-2 py-0.5 rounded print-bg-transparent">Dec 2024 - Jan 2025</span>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] italic mb-2">
-                    <span>Extion Infotech</span>
-                    <span class="font-normal not-italic text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Remote</span>
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline mb-2 text-[13.5px]">
+                    <span class="font-semibold text-blue-700">Extion Infotech</span>
+                    <span class="text-[13px] text-slate-500 flex items-center gap-1 font-medium">
+                        <svg class="w-3.5 h-3.5 print-hidden text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Remote
+                    </span>
                 </div>
-                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
-                    <li>Conducted network vulnerability assessments using Nmap, Nessus, and Metasploit - identified 8+ critical misconfigurations across Windows-based systems.</li>
-                    <li>Executed full penetration testing lifecycle: scoping, enumeration, exploitation, and professional reporting across 2 network segments.</li>
-                    <li>Delivered structured mitigation reports with CVSS severity ratings and remediation steps for each identified finding.</li>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-[13px] text-slate-700 text-justify marker:text-blue-500">
+                    <li>Conducted rigorous network vulnerability assessments utilizing Nmap, Nessus, and Metasploit, successfully identifying 8+ critical misconfigurations across Windows-based systems.</li>
+                    <li>Executed the full penetration testing lifecycle: scoping, enumeration, exploitation, and professional reporting across 2 distinct network segments.</li>
+                    <li>Delivered structured mitigation reports featuring accurate CVSS severity ratings and actionable remediation steps for every identified finding.</li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul class="space-y-2 ml-1 pr-2 sm:pr-0">
-                <li><span class="font-bold">Security Testing:</span> Web Application Security (OWASP Top 10), API Security Testing (OWASP API Top 10), VAPT, Business Logic Testing, Authentication & Authorization Testing, Session Management Testing, Privilege Escalation, Race Condition Testing, IDOR/BOLA Testing</li>
-                <li><span class="font-bold">OSINT & Reconnaissance:</span> OSINT, GEOINT, SOCMINT, Metadata Analysis, Google Dorking, Shodan</li>
-                <li><span class="font-bold">Tools:</span> Burp Suite, Postman, sqlmap, Nmap, Nessus, OpenVAS, Metasploit, Wireshark, OWASP ZAP, Acunetix</li>
-                <li><span class="font-bold">Programming:</span> Python (automation, exploit scripting), Bash Scripting</li>
-                <li><span class="font-bold">Networking:</span> TCP/IP, HTTP/HTTPS, DNS, TLS/SSL, Packet Analysis, Network Protocols</li>
-                <li><span class="font-bold">Platforms & OS:</span> Kali Linux, Ubuntu, Windows 10/11</li>
-                <li><span class="font-bold">Reporting:</span> CVSS Scoring, PoC Development, Vulnerability Reporting & Remediation</li>
-            </ul>
+        <section class="mb-7">
+            <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-4 relative">
+                Technical Skills
+                <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+            </h2>
+            <div class="grid grid-cols-1 gap-2.5 text-[13px]">
+                <div class="flex flex-col sm:flex-row sm:items-start">
+                    <span class="font-bold text-slate-900 sm:w-[160px] shrink-0 mb-0.5 sm:mb-0">Security Testing:</span>
+                    <span class="text-slate-700 leading-relaxed">Web Application Security (OWASP Top 10), API Security Testing (OWASP API Top 10), VAPT, Business Logic Testing, Authentication & Authorization Testing, Session Management, Privilege Escalation, Race Conditions, IDOR/BOLA.</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-start">
+                    <span class="font-bold text-slate-900 sm:w-[160px] shrink-0 mb-0.5 sm:mb-0">OSINT & Recon:</span>
+                    <span class="text-slate-700 leading-relaxed">OSINT, GEOINT, SOCMINT, Metadata Analysis, Google Dorking, Shodan.</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-start">
+                    <span class="font-bold text-slate-900 sm:w-[160px] shrink-0 mb-0.5 sm:mb-0">Security Tools:</span>
+                    <span class="text-slate-700 leading-relaxed">Burp Suite, Postman, SQLMap, Nmap, Nessus, OpenVAS, Metasploit, Wireshark, OWASP ZAP, Acunetix.</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-start">
+                    <span class="font-bold text-slate-900 sm:w-[160px] shrink-0 mb-0.5 sm:mb-0">Programming:</span>
+                    <span class="text-slate-700 leading-relaxed">Python (Automation, Exploit Scripting), Bash Scripting.</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-start">
+                    <span class="font-bold text-slate-900 sm:w-[160px] shrink-0 mb-0.5 sm:mb-0">Networking & OS:</span>
+                    <span class="text-slate-700 leading-relaxed">TCP/IP, HTTP/HTTPS, DNS, TLS/SSL, Kali Linux, Ubuntu, Windows 10/11.</span>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Projects</h2>
+        <section class="mb-7">
+            <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-4 relative">
+                Projects
+                <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+            </h2>
             
             <!-- Project 1 -->
-            <div class="mb-5">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>DecoderX - Security Encoding/Decoding Toolkit</span>
-                    <span class="font-normal text-[12px] sm:text-[13px] mt-0.5 sm:mt-0 print-mt-0">Nov 2025 - Dec 2025</span>
+            <div class="mb-5 group">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline">
+                    <div class="flex items-center gap-2">
+                        <h3 class="font-bold text-[14.5px] text-slate-900">DecoderX - Security Encoding/Decoding Toolkit</h3>
+                        <a href="https://decoderx.pages.dev" target="_blank" rel="noopener noreferrer" class="hidden sm:flex text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                    <span class="font-semibold text-[13px] text-slate-600 whitespace-nowrap mt-0.5 sm:mt-0">Nov 2025 - Dec 2025</span>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] mb-2 italic">
-                    <span>React | Tailwind CSS | JavaScript</span>
-                    <a href="https://decoderx.pages.dev" class="text-blue-700 underline font-normal not-italic hover:text-blue-800 mt-0.5 sm:mt-0 print-mt-0 break-all">decoderx.pages.dev</a>
+                <div class="text-[13px] text-blue-700 font-medium mb-1.5 flex flex-wrap gap-2 items-center">
+                    <span>React • Tailwind CSS • JavaScript</span>
+                    <span class="sm:hidden text-slate-400">|</span>
+                    <a href="https://decoderx.pages.dev" class="sm:hidden text-blue-600 hover:underline">decoderx.pages.dev</a>
                 </div>
-                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
-                    <li>Built a browser-based security utility for real-time payload encoding/decoding directly applicable to web and API penetration testing workflows.</li>
-                    <li>Supports Base64, Base64URL, URL Encoding, Hex, Binary, Unicode, HTML Entity, ROT13, and Reverse all formats commonly used in payload manipulation during security assessments.</li>
-                    <li>Developed custom encoding/decoding logic with React + Tailwind CSS; optimized for low RAM usage and fast execution for real-time payload testing scenarios.</li>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-[13px] text-slate-700 text-justify marker:text-blue-500">
+                    <li>Engineered a browser-based security utility for real-time payload encoding and decoding, directly applicable to modern web and API penetration testing workflows.</li>
+                    <li>Integrated support for Base64, Base64URL, URL Encoding, Hex, Binary, Unicode, HTML Entity, ROT13, and Reverse—encompassing all formats frequently utilized in payload manipulation during sophisticated security assessments.</li>
+                    <li>Developed custom encoding/decoding logic leveraging React and Tailwind CSS; optimized the architecture for minimal RAM footprint and instantaneous execution in real-time testing scenarios.</li>
                 </ul>
             </div>
 
-            <div class="mb-3">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>Personal Portfolio Website</span>
+            <!-- Project 2 -->
+            <div class="mb-3 group">
+                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline">
+                    <div class="flex items-center gap-2">
+                        <h3 class="font-bold text-[14.5px] text-slate-900">Personal Security Portfolio Website</h3>
+                        <a href="https://vikas-sultane.netlify.app" target="_blank" rel="noopener noreferrer" class="hidden sm:flex text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-semibold text-[13px] mb-2 italic">
-                    <span>HTML | CSS | JavaScript | Hosted on Netlify</span>
-                    <a href="https://vikas-sultane.netlify.app" class="text-blue-700 underline font-normal not-italic hover:text-blue-800 mt-0.5 sm:mt-0 print-mt-0 break-all">vikas-sultane.netlify.app</a>
+                <div class="text-[13px] text-blue-700 font-medium mb-1.5 flex flex-wrap gap-2 items-center">
+                    <span>HTML • CSS • JavaScript • Netlify</span>
+                    <span class="sm:hidden text-slate-400">|</span>
+                    <a href="https://vikas-sultane.netlify.app" class="sm:hidden text-blue-600 hover:underline">vikas-sultane.netlify.app</a>
                 </div>
-                <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1.5 text-left sm:text-justify pr-2 sm:pr-0">
-                    <li>Designed and developed a personal portfolio website showcasing security projects, tools, and professional profile.</li>
-                    <li>Built with vanilla HTML, CSS, and JavaScript; deployed on Netlify for fast, reliable static hosting.</li>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-[13px] text-slate-700 text-justify marker:text-blue-500">
+                    <li>Architected and developed a responsive personal portfolio website to showcase professional security projects, proprietary tools, and career milestones.</li>
+                    <li>Built utilizing pure HTML, CSS, and JavaScript, and successfully deployed via Netlify to ensure high availability and fast static asset delivery.</li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <h2>Certifications</h2>
-            <ul class="list-disc list-outside ml-4 sm:ml-5 space-y-1">
-                <li><span class="font-bold">Advanced Cyber Security</span> - TechUnique Academy</li>
-                <li><span class="font-bold">OSINT - CCI</span> - TechUnique Academy</li>
-                <li><span class="font-bold">Linux</span> - WsCube Tech</li>
-                <li><span class="font-bold">Web Fundamentals</span> - Udemy</li>
-                <li><span class="font-bold">Computer Networks</span> - Udemy</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Education</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 print-col-2">
             
-            <div class="mb-4">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>B.Tech - Electronics & Telecommunication Engineering</span>
-                </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
-                    <span>Government College of Engineering, Yavatmal</span>
-                    <span class="mt-0.5 sm:mt-0 print-mt-0">2021 - 2025</span>
-                </div>
-            </div>
+            <!-- Certifications -->
+            <section>
+                <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-4 relative">
+                    Certifications
+                    <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+                </h2>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-[13px] text-slate-700 marker:text-blue-500">
+                    <li><span class="font-bold text-slate-900">Advanced Cyber Security</span> - TechUnique Academy</li>
+                    <li><span class="font-bold text-slate-900">OSINT - CCI</span> - TechUnique Academy</li>
+                    <li><span class="font-bold text-slate-900">Linux Administration</span> - WsCube Tech</li>
+                    <li><span class="font-bold text-slate-900">Web Fundamentals</span> - Udemy</li>
+                    <li><span class="font-bold text-slate-900">Computer Networks</span> - Udemy</li>
+                </ul>
+            </section>
 
-            <div class="mb-4">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>HSC (Class XII) | 83%</span>
+            <!-- Education -->
+            <section>
+                <h2 class="text-[14px] font-bold text-slate-900 uppercase tracking-wider border-b-2 border-slate-100 pb-1.5 mb-4 relative">
+                    Education
+                    <span class="absolute left-0 bottom-[-2px] w-12 border-b-2 border-blue-600"></span>
+                </h2>
+                
+                <div class="mb-3.5 border-l-2 border-slate-200 pl-3.5 hover:border-blue-600 transition-colors">
+                    <h3 class="font-bold text-[13.5px] text-slate-900 leading-tight">B.Tech - Electronics & Telecommunication Engineering</h3>
+                    <div class="text-[12.5px] text-slate-700 font-medium mt-0.5">Government College of Engineering, Yavatmal</div>
+                    <div class="text-[12.5px] text-slate-500 mt-0.5">2021 - 2025</div>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
-                    <span>Jijamata Vidyalaya And Jr College, Naya Andura</span>
-                    <span class="mt-0.5 sm:mt-0 print-mt-0">2020 - 2021</span>
-                </div>
-            </div>
 
-            <div class="mb-2">
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline font-bold text-[14px]">
-                    <span>SSC (Class X) | 75%</span>
+                <div class="mb-3.5 border-l-2 border-slate-200 pl-3.5 hover:border-blue-600 transition-colors">
+                    <h3 class="font-bold text-[13.5px] text-slate-900 leading-tight">HSC (Class XII) | 83%</h3>
+                    <div class="text-[12.5px] text-slate-700 font-medium mt-0.5">Jijamata Vidyalaya And Jr. College, Naya Andura</div>
+                    <div class="text-[12.5px] text-slate-500 mt-0.5">2020 - 2021</div>
                 </div>
-                <div class="flex flex-col sm:flex-row print-row justify-between sm:items-baseline print-items-baseline text-[13px]">
-                    <span>Jijamata Vidyalaya And Jr College, Naya Andura</span>
-                    <span class="mt-0.5 sm:mt-0 print-mt-0">2018 - 2019</span>
-                </div>
-            </div>
-        </section>
 
-    </div>
+                <div class="border-l-2 border-slate-200 pl-3.5 hover:border-blue-600 transition-colors">
+                    <h3 class="font-bold text-[13.5px] text-slate-900 leading-tight">SSC (Class X) | 75%</h3>
+                    <div class="text-[12.5px] text-slate-700 font-medium mt-0.5">Jijamata Vidyalaya And Jr. College, Naya Andura</div>
+                    <div class="text-[12.5px] text-slate-500 mt-0.5">2018 - 2019</div>
+                </div>
+            </section>
+            
+        </div>
+
+    </main>
 
 </body>
 </html>
